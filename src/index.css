@@ -1,13 +1,50 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.output {
+  box-sizing: border-box;
+  grid-column: 1 / span 4;
+  height: 6rem; /* 增加 output 的高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1px;
+}
+
+.output .last-output {
+  font-size: 1.5rem; /* 调整字体大小 */
+}
+
+.output .current-output {
+  font-size: 2rem; /* 调整字体大小 */
+}
+
+.operations {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: repeat(5, 4rem); /* 每行按钮高度一致 */
+  gap: 1px; /* 添加按钮之间的间距 */
+}
+
+.operations button {
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+}
+
+.operations button:hover {
+  background-color: #B5B5B5;
+}
+
+.calculator {
+  background-color: #B5B5B5;
+  width: calc(24rem + 7px);
+  margin: 0 auto;
+  border: 2px solid black;
 }
